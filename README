@@ -3,3 +3,9 @@
 Gives you a basic Yahoo Layout and includes the CSS Base, Font, Reset settings
 
 Includes a configured authlogic install also.
+
+== Getting started
+
+$> sudo rake gems:install
+$> rake db:create
+$> rake db:migrate
