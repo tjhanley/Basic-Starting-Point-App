@@ -1,9 +1,13 @@
-ActionController::Routing::Routes.draw do |map|  map.resource :user_session
+ActionController::Routing::Routes.draw do |map|
+  map.resources :products
+
+  map.resources :articles
+  map.resource :user_session
   map.resource :account, :controller => "users"
   map.resources :users
 
-  map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
-
+  # map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
+  map.root :articles
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
