@@ -1,3 +1,4 @@
 class Comment < ActiveRecord::Base
-  has_one :article
+  validates_presence_of :body
+  belongs_to :article
 end
