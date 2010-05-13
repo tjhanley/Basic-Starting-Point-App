@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :products
+  map.resources :articles do |article|
+     article.resources :comments
+  end
 
-  map.resources :articles
   map.resource :user_session
   map.resource :account, :controller => "users"
   map.resources :users
